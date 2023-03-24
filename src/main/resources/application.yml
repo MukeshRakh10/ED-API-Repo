@@ -1,0 +1,29 @@
+server.port : 8083
+
+spring:
+  jpa:
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto:  update
+
+  application:
+    name: ED-API
+    
+  datasource:
+#   url: jdbc:mysql://localhost:3306/arapidb
+    url: jdbc:mysql://mysqldb:3306/arapidb
+    username: root
+    password: root
+    
+#  boot:
+#    admin:
+#      client:
+#          url: http://localhost:1111/
+          
+ #Includes all acturators. 
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
